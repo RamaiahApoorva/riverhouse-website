@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Raw/uncompressed source footage — too large for git, kept locally only
+raw-footage/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

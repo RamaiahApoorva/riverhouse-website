@@ -19,7 +19,7 @@ export default function Avatar({ name, avatarUrl, size = 'sm' }) {
   }
 
   return (
-    <div className={`${sizeClasses} rounded-full bg-sage-200 text-sage-800 font-semibold flex items-center justify-center`}>
+    <div className={`${sizeClasses} rounded-full bg-brown-200 text-brown-800 font-semibold flex items-center justify-center`}>
       {initials || '?'}
     </div>
   )

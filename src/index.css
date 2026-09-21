@@ -3,16 +3,16 @@
 @theme {
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
-  --color-sage-50: #f6f7f4;
-  --color-sage-100: #e8ebe3;
-  --color-sage-200: #d1d7c7;
-  --color-sage-300: #b3bda3;
-  --color-sage-400: #95a17f;
-  --color-sage-500: #7c8c6e;
-  --color-sage-600: #5f6d54;
-  --color-sage-700: #4a5542;
-  --color-sage-800: #3d4637;
-  --color-sage-900: #343b2f;
+  --color-brown-50: #faf8f6;
+  --color-brown-100: #f0e6de;
+  --color-brown-200: #ddc3b0;
+  --color-brown-300: #c49f86;
+  --color-brown-400: #a8785e;
+  --color-brown-500: #8a5f48;
+  --color-brown-600: #6c4a38;
+  --color-brown-700: #533829;
+  --color-brown-800: #3c281c;
+  --color-brown-900: #2e2015;
 }
 
 html {
@@ -21,6 +21,6 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: #1c1917;
-  background: #fafaf9;
+  color: #f0e6de;
+  background: #2e2015;
 }

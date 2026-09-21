@@ -3,11 +3,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useAuth } from '../context/AuthContext'
 import Avatar from './Avatar'
+import { BOOKING_URL } from '../lib/booking'
 
 const publicLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/booking', label: 'Book a Class' },
+  { to: '/faq', label: 'FAQ' },
 ]
 
 export default function Navbar() {
@@ -35,12 +36,12 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-brown-900/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-serif text-2xl font-semibold tracking-tight text-stone-900">
-          Serenity
+        <Link to="/" className="flex items-center">
+          <img src="/logo.png" alt="River House Studio" className="h-11 w-auto" />
         </Link>
 
         {/* Desktop */}
@@ -50,41 +51,40 @@ export default function Navbar() {
               key={to}
               to={to}
               className={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 ${
-                pathname === to ? 'text-sage-700' : 'text-stone-500 hover:text-stone-900'
+                pathname === to ? 'text-brown-300' : 'text-brown-100 hover:text-brown-50'
               }`}
             >
               {label}
             </Link>
           ))}
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium tracking-wide uppercase transition-colors duration-200 text-brown-100 hover:text-brown-50"
+          >
+            Book a Class
+          </a>
           {isAdmin && (
             <Link
               to="/admin"
               className={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 ${
-                pathname === '/admin' ? 'text-sage-700' : 'text-stone-500 hover:text-stone-900'
+                pathname === '/admin' ? 'text-brown-300' : 'text-brown-100 hover:text-brown-50'
               }`}
             >
               Admin
             </Link>
           )}
-          {user ? (
+          {user && (
             <div className="flex items-center gap-3">
               <Avatar name={profile?.full_name} avatarUrl={profile?.avatar_url} />
               <button
                 onClick={handleSignOut}
-                className="text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-stone-900 transition-colors duration-200"
+                className="text-sm font-medium tracking-wide uppercase text-brown-100 hover:text-brown-50 transition-colors duration-200"
               >
                 Sign Out
               </button>
             </div>
-          ) : (
-            <Link
-              to="/login"
-              className={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 ${
-                pathname === '/login' ? 'text-sage-700' : 'text-stone-500 hover:text-stone-900'
-              }`}
-            >
-              Sign In
-            </Link>
           )}
         </div>
 
@@ -94,9 +94,9 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 bg-stone-800 transition-transform duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-stone-800 transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-stone-800 transition-transform duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-brown-50 transition-transform duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-brown-50 transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-brown-50 transition-transform duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
@@ -106,33 +106,38 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-white/95 backdrop-blur-md border-t border-stone-100"
+          className="md:hidden bg-brown-900/95 backdrop-blur-md border-t border-brown-800"
         >
           <div className="px-6 py-4 flex flex-col gap-4">
             {publicLinks.map(({ to, label }) => (
               <Link
                 key={to} to={to} onClick={() => setMenuOpen(false)}
-                className={`text-sm font-medium tracking-wide uppercase ${pathname === to ? 'text-sage-700' : 'text-stone-500'}`}
+                className={`text-sm font-medium tracking-wide uppercase ${pathname === to ? 'text-brown-300' : 'text-brown-100'}`}
               >
                 {label}
               </Link>
             ))}
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="text-sm font-medium tracking-wide uppercase text-brown-100"
+            >
+              Book a Class
+            </a>
             {isAdmin && (
-              <Link to="/admin" onClick={() => setMenuOpen(false)} className="text-sm font-medium tracking-wide uppercase text-stone-500">
+              <Link to="/admin" onClick={() => setMenuOpen(false)} className="text-sm font-medium tracking-wide uppercase text-brown-100">
                 Admin
               </Link>
             )}
-            {user ? (
+            {user && (
               <div className="flex items-center gap-3">
                 <Avatar name={profile?.full_name} avatarUrl={profile?.avatar_url} />
-                <button onClick={handleSignOut} className="text-sm font-medium tracking-wide uppercase text-stone-500 text-left">
+                <button onClick={handleSignOut} className="text-sm font-medium tracking-wide uppercase text-brown-100 text-left">
                   Sign Out
                 </button>
               </div>
-            ) : (
-              <Link to="/login" onClick={() => setMenuOpen(false)} className="text-sm font-medium tracking-wide uppercase text-stone-500">
-                Sign In
-              </Link>
             )}
           </div>
         </motion.div>

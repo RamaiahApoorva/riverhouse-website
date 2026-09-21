@@ -10,14 +10,14 @@ export default function PasswordInput({ id, value, onChange, placeholder = 'Pass
         type={show ? 'text' : 'password'}
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-3 pr-12 rounded-xl border border-stone-200 bg-white text-stone-900 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all"
+        className="w-full px-4 py-3 pr-12 rounded-xl border border-brown-700 bg-brown-800 text-brown-50 focus:outline-none focus:ring-2 focus:ring-brown-500 focus:border-transparent transition-all"
         placeholder={placeholder}
         {...props}
       />
       <button
         type="button"
         onClick={() => setShow(!show)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-brown-400 hover:text-brown-200 transition-colors"
         aria-label={show ? 'Hide password' : 'Show password'}
       >
         {show ? (

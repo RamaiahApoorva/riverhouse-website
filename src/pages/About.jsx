@@ -2,16 +2,14 @@ import { motion } from 'framer-motion'
 import AnimatedSection from '../components/AnimatedSection'
 
 const instructors = [
-  { name: 'Elena Marsh', role: 'Founder & Lead Instructor', bio: '15 years of practice. Certified in Mat, Reformer, and Clinical Pilates. Trained in London and New York.' },
-  { name: 'David Chen', role: 'Reformer Specialist', bio: '10 years teaching dynamic reformer classes. Former dancer who brings grace and precision to every session.' },
-  { name: 'Aisha Patel', role: 'Mat & Recovery Guide', bio: '8 years of movement practice. Specializes in corrective exercise and mobility techniques.' },
+  { name: 'Kimmy', role: 'Founder and Lead Instructor', bio: 'The founder behind River House Studio.' },
 ]
 
 const values = [
-  { title: 'Precision', desc: 'Every movement, every breath, every rep performed with full control and intention.' },
-  { title: 'Community', desc: 'A welcoming space where every body is a pilates body. No judgment, only growth.' },
-  { title: 'Growth', desc: 'Meet yourself where you are. Progress is personal and celebrated at every stage.' },
-  { title: 'Balance', desc: 'Strength and flexibility. Power and control. In the studio and in daily life.' },
+  { title: 'Strength', desc: 'Built slowly and properly. Small movements, full control — the kind of strength that holds up outside the studio in your everyday lives.' },
+  { title: 'Confidence', desc: 'Every body is a Pilates body. We learn to love our bodies and feel empowered by how they move.' },
+  { title: 'Connection', desc: "Intimate classes, same faces, growing within the community that you create — not just a studio, it's a village." },
+  { title: 'Presence', desc: 'Time on the mat is time back with yourself — a chance to slow down, tune in, and come back to who you are.' },
 ]
 
 export default function About() {
@@ -23,13 +21,13 @@ export default function About() {
       transition={{ duration: 0.4 }}
     >
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-sage-50 to-white">
+      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-brown-800 to-brown-900">
         <div className="max-w-3xl mx-auto text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-sage-600 text-sm font-medium uppercase tracking-[0.2em] mb-4"
+            className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-4"
           >
             Our Story
           </motion.p>
@@ -37,40 +35,41 @@ export default function About() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
-            className="font-serif text-5xl md:text-6xl text-stone-900 font-semibold mb-6"
+            className="font-serif text-5xl md:text-6xl text-brown-50 font-semibold mb-6"
           >
-            Rooted in Practice
+            Named for Two Rivers
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-stone-500 text-lg leading-relaxed"
+            className="text-brown-100 text-lg leading-relaxed text-center space-y-4"
           >
-            Serenity was born from a simple belief: pilates should be accessible, authentic, and
-            transformative. Founded in 2018, we&apos;ve grown from a small garage studio to a
-            thriving community of over 500 members who share a love for mindful movement.
-          </motion.p>
+            <p>My mum was raised on the coast, Rivers, in the Niger Delta region of southern Nigeria. Water was the backdrop to her whole childhood. Mine was east London. Being raised here shaped me.</p>
+            <p>When I found out about the development of Barking Riverside, it felt like a home away from home, minutes from the Thames, the name came before anything else did. River House is a nod to where my parents know, and where I&apos;ve ended up. (The two wavy lines beneath the R and the H aren&apos;t decoration.)</p>
+            <p>The studio opened in summer 2026, the first Pilates and yoga studio in Barking Riverside — an area still being built, full of people who arrived recently and were looking for somewhere to belong.</p>
+            <p>It started small on purpose. Twelve people per class, so nobody is a face in a crowd. Six-week blocks, so you&apos;re building towards something rather than dropping in and out. And time afterwards to actually talk, because the class was never really the whole point.</p>
+          </motion.div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-24 px-6 bg-brown-900">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sage-600 text-sm font-medium uppercase tracking-[0.2em] mb-3">Our Philosophy</p>
-            <h2 className="font-serif text-4xl text-stone-900 font-semibold">What We Stand For</h2>
+            <p className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-3">Our Philosophy</p>
+            <h2 className="font-serif text-4xl text-brown-50 font-semibold">What We Stand For</h2>
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((v, i) => (
               <AnimatedSection key={v.title} delay={i * 0.1}>
                 <div className="text-center">
-                  <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-sage-100 flex items-center justify-center">
-                    <span className="text-sage-700 font-serif text-xl font-semibold">{v.title[0]}</span>
+                  <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-brown-700 flex items-center justify-center">
+                    <span className="text-brown-100 font-serif text-xl font-semibold">{v.title[0]}</span>
                   </div>
-                  <h3 className="font-serif text-xl text-stone-900 mb-2">{v.title}</h3>
-                  <p className="text-stone-500 text-sm leading-relaxed">{v.desc}</p>
+                  <h3 className="font-serif text-xl text-brown-50 mb-2">{v.title}</h3>
+                  <p className="text-brown-200 text-sm leading-relaxed">{v.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -79,26 +78,33 @@ export default function About() {
       </section>
 
       {/* Instructors */}
-      <section className="py-24 px-6 bg-sage-50">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-24 px-6 bg-brown-800 overflow-hidden">
+        <img
+          src="/Kimphoto.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-[50%_50%] opacity-45"
+        />
+        <div className="absolute inset-0 bg-brown-800/55" />
+        <div className="relative z-10 max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sage-600 text-sm font-medium uppercase tracking-[0.2em] mb-3">Meet The Team</p>
-            <h2 className="font-serif text-4xl text-stone-900 font-semibold">Your Guides</h2>
+            <p className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-3">Meet The Founder</p>
+            <h2 className="font-serif text-4xl text-brown-50 font-semibold">Your Guide</h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex justify-center">
             {instructors.map((inst, i) => (
-              <AnimatedSection key={inst.name} delay={i * 0.12}>
+              <AnimatedSection key={inst.name} delay={i * 0.12} className="w-full max-w-sm">
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="bg-brown-900 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
                 >
-                  <div className="w-24 h-24 mx-auto mb-5 rounded-full bg-sage-200 flex items-center justify-center">
-                    <span className="text-sage-800 font-serif text-3xl font-semibold">{inst.name[0]}</span>
+                  <div className="w-24 h-24 mx-auto mb-5 rounded-full bg-brown-600 flex items-center justify-center">
+                    <span className="text-brown-50 font-serif text-3xl font-semibold">{inst.name[0]}</span>
                   </div>
-                  <h3 className="font-serif text-xl text-stone-900 mb-1">{inst.name}</h3>
-                  <p className="text-sage-600 text-sm font-medium mb-3">{inst.role}</p>
-                  <p className="text-stone-500 text-sm leading-relaxed">{inst.bio}</p>
+                  <h3 className="font-serif text-xl text-brown-50 mb-1">{inst.name}</h3>
+                  <p className="text-brown-300 text-sm font-medium mb-3">{inst.role}</p>
+                  <p className="text-brown-200 text-sm leading-relaxed">{inst.bio}</p>
                 </motion.div>
               </AnimatedSection>
             ))}
@@ -107,31 +113,15 @@ export default function About() {
       </section>
 
       {/* Studio */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-24 px-6 bg-brown-900">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <p className="text-sage-600 text-sm font-medium uppercase tracking-[0.2em] mb-3">The Space</p>
-            <h2 className="font-serif text-4xl text-stone-900 font-semibold mb-6">Our Studio</h2>
-            <div className="bg-sage-50 rounded-3xl p-12 md:p-16">
-              <p className="text-stone-600 text-lg leading-relaxed mb-6">
-                Natural light fills our 2,000 sq ft studio through floor-to-ceiling windows.
-                Bamboo floors, curated plants, and a minimalist design create a space that feels
-                like a deep breath the moment you walk in.
+            <p className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-3">The Space</p>
+            <h2 className="font-serif text-4xl text-brown-50 font-semibold mb-6">Our Studio</h2>
+            <div className="bg-brown-800 rounded-3xl p-12 md:p-16">
+              <p className="text-brown-100 text-lg leading-relaxed">
+                We practise in the Seminar Room at The Wilds, Barking Riverside. Warm timber, clean smooth floors underfoot and full-height glass doors that pull in the light and the green outside. It&apos;s an intentionally small room — our intimate numbers for spacious mats, no mirrors, no noise. Somewhere to arrive, breathe out, and actually be seen by your instructor.
               </p>
-              <div className="grid grid-cols-3 gap-8 mt-10">
-                <div>
-                  <p className="font-serif text-3xl text-sage-700 font-semibold">500+</p>
-                  <p className="text-stone-500 text-sm mt-1">Active Members</p>
-                </div>
-                <div>
-                  <p className="font-serif text-3xl text-sage-700 font-semibold">30+</p>
-                  <p className="text-stone-500 text-sm mt-1">Weekly Classes</p>
-                </div>
-                <div>
-                  <p className="font-serif text-3xl text-sage-700 font-semibold">6</p>
-                  <p className="text-stone-500 text-sm mt-1">Years Strong</p>
-                </div>
-              </div>
             </div>
           </AnimatedSection>
         </div>

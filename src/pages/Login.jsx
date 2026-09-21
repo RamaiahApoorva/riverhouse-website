@@ -32,7 +32,7 @@ export default function Login() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
     >
-      <section className="pt-32 pb-24 px-6 bg-gradient-to-b from-sage-50 to-white min-h-screen">
+      <section className="pt-32 pb-24 px-6 bg-gradient-to-b from-brown-800 to-brown-900 min-h-screen">
         <div className="max-w-md mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -40,8 +40,8 @@ export default function Login() {
             transition={{ delay: 0.2 }}
             className="text-center mb-10"
           >
-            <p className="text-sage-600 text-sm font-medium uppercase tracking-[0.2em] mb-4">Welcome Back</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-stone-900 font-semibold">Sign In</h1>
+            <p className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-4">Welcome Back</p>
+            <h1 className="font-serif text-4xl md:text-5xl text-brown-50 font-semibold">Sign In</h1>
           </motion.div>
 
           <motion.form
@@ -52,19 +52,19 @@ export default function Login() {
             className="flex flex-col gap-5"
           >
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium text-brown-100 mb-2">Email</label>
               <input
                 id="email"
                 type="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-brown-700 bg-brown-800 text-brown-50 focus:outline-none focus:ring-2 focus:ring-brown-500 focus:border-transparent transition-all"
                 placeholder="you@email.com"
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-stone-700 mb-2">Password</label>
+              <label htmlFor="password" className="block text-sm font-medium text-brown-100 mb-2">Password</label>
               <PasswordInput
                 id="password"
                 required
@@ -74,19 +74,19 @@ export default function Login() {
               />
             </div>
 
-            {error && <p className="text-red-600 text-sm">{error}</p>}
+            {error && <p className="text-red-400 text-sm">{error}</p>}
 
             <button
               type="submit"
               disabled={loading}
-              className="mt-2 bg-sage-700 text-white px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-sage-800 transition-colors duration-300 disabled:opacity-50"
+              className="mt-2 bg-brown-500 text-white px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-400 transition-colors duration-300 disabled:opacity-50"
             >
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
 
-            <p className="text-center text-stone-500 text-sm mt-4">
+            <p className="text-center text-brown-300 text-sm mt-4">
               Don&apos;t have an account?{' '}
-              <Link to="/signup" className="text-sage-700 font-medium hover:underline">Sign Up</Link>
+              <Link to="/signup" className="text-brown-200 font-medium hover:underline">Sign Up</Link>
             </p>
           </motion.form>
         </div>
