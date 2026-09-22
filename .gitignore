@@ -25,3 +25,4 @@ raw-footage/
 *.njsproj
 *.sln
 *.sw?
+.vercel
