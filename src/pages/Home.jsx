@@ -5,9 +5,9 @@ import { supabase } from '../lib/supabase'
 import { BOOKING_URL, FIRST_CLASS_DEAL_URL } from '../lib/booking'
 
 const testimonials = [
-  { name: 'Smita P.', text: 'River House transformed my evenings. I feel stronger, calmer, and more focused than ever.' },
-  { name: 'Kit E.', text: 'The instructors genuinely care. Every class feels like it was made for me.' },
-  { name: 'Lillian J.', text: 'I came for the pilates, stayed for the community. This studio is my second home.' },
+  { name: 'Smita P.', pronouns: 'she/her', text: 'River House transformed my evenings. I feel stronger, calmer, and more focused than ever.' },
+  { name: 'Kit E.', pronouns: 'he/him', text: 'The instructors genuinely care. Every class feels like it was made for me.' },
+  { name: 'Lillian J.', pronouns: 'she/her', text: 'I came for the pilates, stayed for the community. This studio is my second home.' },
 ]
 
 const stagger = {
@@ -108,7 +108,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
-            className="font-serif text-[47px] md:text-[56px] font-semibold leading-tight mb-6 text-brown-50"
+            className="font-sans text-[54px] md:text-[64px] font-semibold leading-tight mb-6 text-brown-50"
           >
             Strength.
             <br />
@@ -183,7 +183,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
             <p className="text-brown-600 text-sm font-medium uppercase tracking-[0.2em] mb-3">Our Classes</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#2A211B] font-semibold">Move With Intention</h2>
+            <h2 className="font-sans text-4xl md:text-5xl text-[#2A211B] font-semibold">Move With Intention</h2>
           </AnimatedSection>
 
           <motion.div
@@ -204,7 +204,7 @@ export default function Home() {
                 <span className="text-xs font-medium uppercase tracking-wider text-brown-700 bg-brown-100 px-3 py-1 rounded-full">
                   {c.level}
                 </span>
-                <h3 className="font-serif text-2xl text-[#2A211B] mt-5 mb-2">{c.name}</h3>
+                <h3 className="font-sans text-2xl text-[#2A211B] mt-5 mb-2">{c.name}</h3>
                 <p className="text-[#2A211B]/80 text-sm leading-relaxed mb-4">{c.description}</p>
                 <p className="text-[#2A211B]/80 text-sm font-medium">{c.time}</p>
               </motion.div>
@@ -218,7 +218,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
             <p className="text-[#AD8CC0] text-sm font-medium uppercase tracking-[0.2em] mb-3">Testimonials</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#2A211B] font-semibold">Words From Our Community</h2>
+            <h2 className="font-sans text-4xl md:text-5xl text-[#2A211B] font-semibold">Words From Our Community</h2>
           </AnimatedSection>
 
           <motion.div
@@ -234,9 +234,9 @@ export default function Home() {
                 variants={fadeUp}
                 className="bg-white rounded-2xl p-8 shadow-sm"
               >
-                <div className="text-[#2A211B]/15 text-5xl font-serif leading-none mb-4">&ldquo;</div>
+                <div className="text-[#2A211B]/15 text-5xl font-sans leading-none mb-4">&ldquo;</div>
                 <p className="text-[#2A211B]/80 leading-relaxed mb-6">{t.text}</p>
-                <p className="text-[#2A211B] font-medium text-sm">{t.name}</p>
+                <p className="text-[#2A211B] font-medium text-sm">{t.name} <span className="text-[#2A211B]/50 font-normal">({t.pronouns})</span></p>
               </motion.div>
             ))}
           </motion.div>
@@ -247,7 +247,7 @@ export default function Home() {
       <section className="py-24 px-6 bg-[#2A211B] text-center">
         <AnimatedSection>
           <p className="text-[#F5F0E8]/70 text-sm font-medium uppercase tracking-[0.2em] mb-3">Ready to Join</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#F5F0E8] font-semibold mb-6">Begin Your Journey Today</h2>
+          <h2 className="font-sans text-4xl md:text-5xl text-[#F5F0E8] font-semibold mb-6">Begin Your Journey Today</h2>
           <p className="text-[#F5F0E8]/80 max-w-lg mx-auto mb-10 leading-relaxed">
             Start with 2 classes for £33. Step into the studio and feel the difference.
           </p>

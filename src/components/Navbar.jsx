@@ -8,6 +8,7 @@ import { BOOKING_URL } from '../lib/booking'
 const publicLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
+  { to: '/events', label: 'Events' },
   { to: '/faq', label: 'FAQ' },
 ]
 

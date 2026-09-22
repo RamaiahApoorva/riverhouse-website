@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'EB Garamond', serif;
   --color-brown-50: #faf8f6;
   --color-brown-100: #f0e6de;
   --color-brown-200: #ddc3b0;
@@ -17,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 115%;
 }
 
 body {

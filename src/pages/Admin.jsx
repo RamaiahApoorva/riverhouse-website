@@ -20,7 +20,7 @@ function ClassForm({ editingClass, onSave, onCancel }) {
 
   return (
     <form onSubmit={handleSubmit} className="bg-brown-800 rounded-2xl p-6 shadow-sm border border-brown-700 mb-8">
-      <h3 className="font-serif text-xl text-brown-50 mb-4">{editingClass ? 'Edit Class' : 'Add New Class'}</h3>
+      <h3 className="font-sans text-xl text-brown-50 mb-4">{editingClass ? 'Edit Class' : 'Add New Class'}</h3>
       <div className="grid md:grid-cols-2 gap-4">
         <input
           type="text" required placeholder="Class Name" value={form.name}
@@ -191,7 +191,7 @@ export default function Admin() {
             className="mb-8"
           >
             <p className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-4">Admin</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-brown-50 font-semibold">Dashboard</h1>
+            <h1 className="font-sans text-4xl md:text-5xl text-brown-50 font-semibold">Dashboard</h1>
           </motion.div>
 
           {/* Tabs */}

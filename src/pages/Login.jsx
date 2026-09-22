@@ -41,7 +41,7 @@ export default function Login() {
             className="text-center mb-10"
           >
             <p className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-4">Welcome Back</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-brown-50 font-semibold">Sign In</h1>
+            <h1 className="font-sans text-4xl md:text-5xl text-brown-50 font-semibold">Sign In</h1>
           </motion.div>
 
           <motion.form

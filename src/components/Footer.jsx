@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#2A211B] text-[#F5F0E8]/80 py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
         <div>
-          <h3 className="font-serif text-2xl text-[#F5F0E8] mb-4">The River House Studio</h3>
+          <h3 className="font-sans text-2xl text-[#F5F0E8] mb-4">The River House Studio</h3>
           <p className="text-sm leading-relaxed">
             Find your balance. Transform your practice. Build strength and flexibility through mindful movement.
           </p>
@@ -16,6 +16,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <Link to="/" className="text-sm hover:text-[#F5F0E8] transition-colors">Home</Link>
             <Link to="/about" className="text-sm hover:text-[#F5F0E8] transition-colors">About</Link>
+            <Link to="/events" className="text-sm hover:text-[#F5F0E8] transition-colors">Events</Link>
             <Link to="/faq" className="text-sm hover:text-[#F5F0E8] transition-colors">FAQ</Link>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[#F5F0E8] transition-colors">Book a Class</a>
           </div>
@@ -25,7 +26,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2 text-sm">
             <p>hello.riverhousestudio@gmail.com</p>
             <p>Barking Riverside</p>
-            <p>Tue & Thu: 6:30pm - 8:15pm</p>
+            <p>Tue & Thu: 6:30pm - 8:30pm</p>
           </div>
         </div>
       </div>

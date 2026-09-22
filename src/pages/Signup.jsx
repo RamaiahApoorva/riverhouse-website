@@ -46,7 +46,7 @@ export default function Signup() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="font-serif text-3xl text-brown-50 font-semibold mb-3">Check Your Email</h2>
+          <h2 className="font-sans text-3xl text-brown-50 font-semibold mb-3">Check Your Email</h2>
           <p className="text-brown-200 mb-8">
             We&apos;ve sent a confirmation link to <strong>{email}</strong>. Click it to activate your account.
           </p>
@@ -77,7 +77,7 @@ export default function Signup() {
             className="text-center mb-10"
           >
             <p className="text-brown-300 text-sm font-medium uppercase tracking-[0.2em] mb-4">Join Us</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-brown-50 font-semibold">Create Account</h1>
+            <h1 className="font-sans text-4xl md:text-5xl text-brown-50 font-semibold">Create Account</h1>
           </motion.div>
 
           <motion.form

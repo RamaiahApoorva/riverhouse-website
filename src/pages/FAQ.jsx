@@ -32,6 +32,14 @@ const faqs = [
     a: 'We practise in the Seminar Room at The Wilds, Barking Riverside — minutes from the Thames.',
   },
   {
+    q: 'Is there a car park at The Wilds?',
+    points: [
+      'There is a public car park next to The Wilds. This is a pay-to-park facility charged at 50p per hour, with 24 visitor spaces available 24/7.',
+      "An additional larger car park is available approximately 0.5 miles (around a 15-minute walk) from the venue at: Project Road Car Park, Project Road, IG11 0YP.",
+      "Vehicles are parked at the owner's own risk, and Barking Riverside Limited cannot be held liable for any parking fines or charges.",
+    ],
+  },
+  {
     q: "What's your cancellation policy?",
     a: 'Cancellations are accepted up to 11 hours before your class. Need to reach us? Call 07951 418850 or email hello.riverhousestudio@gmail.com.',
   },
@@ -44,7 +52,7 @@ function FAQItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-6 text-left"
       >
-        <span className="font-serif text-lg md:text-xl text-brown-50">{item.q}</span>
+        <span className="font-sans text-lg md:text-xl text-brown-50">{item.q}</span>
         <span
           className={`shrink-0 w-8 h-8 rounded-full border border-brown-500 flex items-center justify-center text-brown-200 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
         >
@@ -60,7 +68,15 @@ function FAQItem({ item, isOpen, onToggle }) {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <p className="text-brown-200 leading-relaxed pb-6 pr-12">{item.a}</p>
+            {item.points ? (
+              <ul className="text-brown-200 leading-relaxed pb-6 pr-12 space-y-3 list-disc pl-5">
+                {item.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-brown-200 leading-relaxed pb-6 pr-12">{item.a}</p>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
@@ -93,7 +109,7 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
-            className="font-serif text-5xl md:text-6xl text-brown-50 font-semibold mb-6"
+            className="font-sans text-5xl md:text-6xl text-brown-50 font-semibold mb-6"
           >
             Frequently Asked Questions
           </motion.h1>
@@ -127,7 +143,7 @@ export default function FAQ() {
       {/* CTA */}
       <section className="py-24 px-6 bg-brown-800 text-center">
         <AnimatedSection>
-          <h2 className="font-serif text-3xl md:text-4xl text-brown-50 font-semibold mb-6">Still have a question?</h2>
+          <h2 className="font-sans text-3xl md:text-4xl text-brown-50 font-semibold mb-6">Still have a question?</h2>
           <p className="text-brown-100 max-w-lg mx-auto mb-10 leading-relaxed">
             Drop us a line and we&apos;ll get back to you.
           </p>
