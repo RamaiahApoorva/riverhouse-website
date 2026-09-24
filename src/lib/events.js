@@ -38,7 +38,7 @@ export const events = [
     date: '2026-10-17',
     time: '11:00am - 3:00pm',
     venue: 'The Wilds, Barking Riverside',
-    description: "Move, pause, play and connect. Start on the mat, take it to the court, then slow down with guided mindfulness before gathering for a grazing lunch and good conversation. An intimate day in the company of like-minded women. Women's only event.",
+    description: "Move, pause, play and connect. Start on the mat, take it to the court, then slow down with guided mindfulness before gathering for a grazing lunch and good conversation. A beautiful day out, an intimate day in the company of like-minded women. A women only event.",
     ctaLabel: 'Register Interest',
     ctaUrl: 'mailto:hello.riverhousestudio@gmail.com?subject=The%20River%20House%20Studio%20x%20TheCollective%20Wellness%20day&body=Hi%20River%20House%20Studio%20team%2C%0D%0A%0D%0AI%20would%20love%20to%20register%20my%20interest%20in%20the%20Pilates%20x%20Padel%20Wellness%20Day%20with%20theCOLLECTIVE%20on%2017%20October.%0D%0A%0D%0APlease%20let%20me%20know%20the%20next%20steps%20to%20secure%20my%20place.%0D%0A%0D%0AThank%20you!',
   },
