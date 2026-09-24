@@ -28,17 +28,19 @@ function UpcomingCard({ event, delay }) {
     <AnimatedSection delay={delay}>
       <div className="bg-brown-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
         <h3 className="font-sans text-2xl text-brown-50 mb-2">{event.name}</h3>
-        <p className="text-brown-300 text-sm font-medium mb-1">{formatDate(event.date)}{event.time ? ` · ${event.time}` : ''}</p>
-        <p className="text-brown-300 text-sm font-medium mb-4">{event.venue}</p>
+        <p className="text-brown-300 text-sm font-medium mb-1">{event.dateDisplay || formatDate(event.date)}{event.time ? ` · ${event.time}` : ''}</p>
+        {event.venue && <p className="text-brown-300 text-sm font-medium mb-4">{event.venue}</p>}
         <p className="text-brown-200 text-sm leading-relaxed mb-6">{event.description}</p>
-        <a
-          href={event.ctaUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-brown-700 text-white px-6 py-3 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-600 transition-colors duration-300"
-        >
-          {event.ctaLabel}
-        </a>
+        {event.ctaUrl && (
+          <a
+            href={event.ctaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-brown-700 text-white px-6 py-3 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-600 transition-colors duration-300"
+          >
+            {event.ctaLabel}
+          </a>
+        )}
       </div>
     </AnimatedSection>
   )

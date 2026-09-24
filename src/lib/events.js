@@ -7,12 +7,16 @@
 // Fields:
 //   id          — unique short slug, no spaces (used internally, doesn't show on the page)
 //   name        — event name
-//   date        — the event's date as 'YYYY-MM-DD' (used to sort and to decide upcoming vs past)
+//   date        — the event's date as 'YYYY-MM-DD' (used to sort and to decide upcoming vs past —
+//                 always required, even if dateDisplay is set)
+//   dateDisplay — (optional) text shown instead of the full date, e.g. 'October 2026' — use this
+//                 for private/invite-only events where you don't want the exact date public
 //   time        — (optional) display text, e.g. '7:00 PM' — leave out entirely to hide it on the card
-//   venue       — venue name / location
+//   venue       — (optional) venue name / location — leave out entirely to hide it on the card
 //   description — 1–2 sentences
-//   ctaLabel    — button text, e.g. 'RSVP', 'Book', 'Register Interest'
-//   ctaUrl      — where the button links to
+//   ctaLabel    — (optional) button text, e.g. 'RSVP', 'Book', 'Register Interest'
+//   ctaUrl      — (optional) where the button links to — leave both ctaLabel and ctaUrl out entirely
+//                 to hide the button (e.g. for invite-only events with no public sign-up)
 //   image       — (past events only, optional) path to a single photo, e.g. '/events/photo.jpg'
 //   images      — (past events only, optional) array of photo paths for a gallery, e.g.
 //                 ['/events/1.jpg', '/events/2.jpg'] — put the actual files in the `public/events/` folder
@@ -22,10 +26,8 @@ export const events = [
     id: 'seat-at-the-table',
     name: 'A Seat at the Table',
     date: '2026-10-14',
-    venue: 'Scarlet Rasoi, The O2',
+    dateDisplay: 'October 2026',
     description: "Meeting off the mat. Think a boat to The O2, dinner under the stars, surrounded by people who care. A River House community social, the first to say thank you. Built on real conversation and good company — the kind of evening that stays with you.",
-    ctaLabel: 'Register Interest',
-    ctaUrl: 'mailto:hello.riverhousestudio@gmail.com?subject=Register%20Interest%3A%20A%20Seat%20at%20the%20Table&body=Hi%20River%20House%20Studio%20team%2C%0D%0A%0D%0AI%20would%20love%20to%20register%20my%20interest%20for%20A%20Seat%20at%20the%20Table%20on%2014%20October.%0D%0A%0D%0APlease%20let%20me%20know%20the%20next%20steps.%0D%0A%0D%0AThank%20you!',
   },
   {
     id: 'pilates-x-padel',
