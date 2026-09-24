@@ -4,6 +4,12 @@ import AnimatedSection from '../components/AnimatedSection'
 import { supabase } from '../lib/supabase'
 import { BOOKING_URL, FIRST_CLASS_DEAL_URL } from '../lib/booking'
 
+const instructors = [
+  { name: 'Kimmy', role: 'Founder & Pilates Instructor', bio: 'Leads Pilates Root and Pilates Rise, building strength from the ground up.' },
+  { name: 'Shadeyah', role: 'Restorative Yoga Instructor', bio: 'Guides our Restorative Yoga sessions, creating space to slow down and reset.' },
+  { name: 'Salima', role: 'Hatha Yoga Instructor', bio: 'Teaches Hatha Yoga, focused on steady, grounding practice.' },
+]
+
 const testimonials = [
   { name: 'Smita P.', pronouns: 'she/her', text: 'River House transformed my evenings. I feel stronger, calmer, and more focused than ever.' },
   { name: 'Kit E.', pronouns: 'he/him', text: 'The instructors genuinely care. Every class feels like it was made for me.' },
@@ -207,6 +213,39 @@ export default function Home() {
                 <h3 className="font-sans text-2xl text-[#2A211B] mt-5 mb-2">{c.name}</h3>
                 <p className="text-[#2A211B]/80 text-sm leading-relaxed mb-4">{c.description}</p>
                 <p className="text-[#2A211B]/80 text-sm font-medium">{c.time}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Instructors */}
+      <section className="py-24 px-6 bg-[#F5F0E8]">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <p className="text-brown-600 text-sm font-medium uppercase tracking-[0.2em] mb-3">Meet The Team</p>
+            <h2 className="font-sans text-4xl md:text-5xl text-[#2A211B] font-semibold">Meet Your Instructors</h2>
+          </AnimatedSection>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {instructors.map((inst) => (
+              <motion.div
+                key={inst.name}
+                variants={fadeUp}
+                className="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-brown-100 flex items-center justify-center">
+                  <span className="text-brown-700 font-sans text-2xl font-semibold">{inst.name[0]}</span>
+                </div>
+                <h3 className="font-sans text-xl text-[#2A211B] mb-1">{inst.name}</h3>
+                <p className="text-brown-600 text-sm font-medium mb-3">{inst.role}</p>
+                <p className="text-[#2A211B]/80 text-sm leading-relaxed">{inst.bio}</p>
               </motion.div>
             ))}
           </motion.div>

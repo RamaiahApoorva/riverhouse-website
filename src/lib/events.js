@@ -1,3 +1,5 @@
+import { BOOKING_URL } from './booking'
+
 // Events data — edit this file to add, remove, or change events. Nothing else needs to change.
 //
 // To add a new event, copy one of the objects below and fill in the fields.
@@ -28,6 +30,8 @@ export const events = [
     date: '2026-10-14',
     dateDisplay: 'October 2026',
     description: "Meeting off the mat. Think a boat to The O2, dinner under the stars, surrounded by people who care. A River House community social, the first to say thank you. Built on real conversation and good company — the kind of evening that stays with you.",
+    ctaLabel: 'Join Us For A Class',
+    ctaUrl: BOOKING_URL,
   },
   {
     id: 'pilates-x-padel',
