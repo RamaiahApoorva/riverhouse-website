@@ -36,7 +36,7 @@ function UpcomingCard({ event, delay }) {
             href={event.ctaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-brown-700 text-white px-6 py-3 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-600 transition-colors duration-300"
+            className="inline-block bg-brown-700 text-brown-50 px-6 py-3 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-600 transition-colors duration-300"
           >
             {event.ctaLabel}
           </a>
@@ -172,7 +172,7 @@ export default function Events() {
           </h2>
           <a
             href="mailto:hello.riverhousestudio@gmail.com?subject=Event%20Collaboration&body=Hi%20River%20House%20Studio%20team%2C%0D%0A%0D%0AMy%20name%20is%3A%20(add%20here)%0D%0A%0D%0AI%20am%20interested%20in%3A%20(add%20here%20-%20e.g.%20hosting%20an%20event%2C%20collaborating%2C%20or%20hiring%20an%20instructor)%0D%0A%0D%0ADetails%3A%20(add%20here)%0D%0A%0D%0AThank%20you!"
-            className="inline-block bg-brown-100 text-brown-900 px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-white hover:-translate-y-1 transition-all duration-300"
+            className="inline-block bg-brown-100 text-brown-900 px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-50 hover:-translate-y-1 transition-all duration-300"
           >
             Get In Touch
           </a>

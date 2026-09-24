@@ -65,7 +65,7 @@ function ClassForm({ editingClass, onSave, onCancel }) {
         rows={2}
       />
       <div className="flex gap-3 mt-4">
-        <button type="submit" className="bg-brown-500 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-brown-400 transition-colors">
+        <button type="submit" className="bg-brown-500 text-brown-50 px-6 py-3 rounded-full text-sm font-medium hover:bg-brown-400 transition-colors">
           {editingClass ? 'Update' : 'Add Class'}
         </button>
         <button type="button" onClick={onCancel} className="border border-brown-600 text-brown-200 px-6 py-3 rounded-full text-sm font-medium hover:border-brown-400 transition-colors">
@@ -123,7 +123,7 @@ function ImageUploader({ imageKey, image, onUploaded }) {
           {isVideo ? 'No video uploaded' : 'No image uploaded'}
         </div>
       )}
-      <label className={`inline-block cursor-pointer bg-brown-500 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brown-400 transition-colors ${uploading ? 'opacity-50 pointer-events-none' : ''}`}>
+      <label className={`inline-block cursor-pointer bg-brown-500 text-brown-50 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brown-400 transition-colors ${uploading ? 'opacity-50 pointer-events-none' : ''}`}>
         {uploading ? 'Uploading...' : image?.image_url ? `Replace ${isVideo ? 'Video' : 'Image'}` : `Upload ${isVideo ? 'Video' : 'Image'}`}
         <input type="file" accept={isVideo ? 'video/*' : 'image/*'} onChange={handleUpload} className="hidden" />
       </label>
@@ -199,7 +199,7 @@ export default function Admin() {
             <button
               onClick={() => setTab('classes')}
               className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
-                tab === 'classes' ? 'bg-brown-500 text-white' : 'bg-brown-800 text-brown-200 hover:bg-brown-700'
+                tab === 'classes' ? 'bg-brown-500 text-brown-50' : 'bg-brown-800 text-brown-200 hover:bg-brown-700'
               }`}
             >
               Classes ({classes.length})
@@ -207,7 +207,7 @@ export default function Admin() {
             <button
               onClick={() => setTab('bookings')}
               className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
-                tab === 'bookings' ? 'bg-brown-500 text-white' : 'bg-brown-800 text-brown-200 hover:bg-brown-700'
+                tab === 'bookings' ? 'bg-brown-500 text-brown-50' : 'bg-brown-800 text-brown-200 hover:bg-brown-700'
               }`}
             >
               Bookings ({bookings.length})
@@ -215,7 +215,7 @@ export default function Admin() {
             <button
               onClick={() => setTab('images')}
               className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
-                tab === 'images' ? 'bg-brown-500 text-white' : 'bg-brown-800 text-brown-200 hover:bg-brown-700'
+                tab === 'images' ? 'bg-brown-500 text-brown-50' : 'bg-brown-800 text-brown-200 hover:bg-brown-700'
               }`}
             >
               Site Images
@@ -228,7 +228,7 @@ export default function Admin() {
               {!showForm && (
                 <button
                   onClick={() => { setShowForm(true); setEditingClass(null) }}
-                  className="mb-6 bg-brown-500 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-brown-400 transition-colors"
+                  className="mb-6 bg-brown-500 text-brown-50 px-6 py-3 rounded-full text-sm font-medium hover:bg-brown-400 transition-colors"
                 >
                   + Add Class
                 </button>

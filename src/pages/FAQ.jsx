@@ -149,7 +149,7 @@ export default function FAQ() {
           </p>
           <a
             href="mailto:hello.riverhousestudio@gmail.com"
-            className="inline-block bg-brown-100 text-brown-900 px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-white hover:-translate-y-1 transition-all duration-300"
+            className="inline-block bg-brown-100 text-brown-900 px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-50 hover:-translate-y-1 transition-all duration-300"
           >
             Email Us
           </a>

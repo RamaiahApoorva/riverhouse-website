@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import ThemeManager from './components/ThemeManager'
 import Home from './pages/Home'
 import About from './pages/About'
 import Events from './pages/Events'
@@ -58,6 +59,7 @@ function AppRoutes() {
 function App() {
   return (
     <AuthProvider>
+      <ThemeManager />
       <AppRoutes />
     </AuthProvider>
   )

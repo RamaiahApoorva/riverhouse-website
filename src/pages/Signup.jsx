@@ -52,7 +52,7 @@ export default function Signup() {
           </p>
           <Link
             to="/login"
-            className="inline-block bg-brown-500 text-white px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-400 transition-colors"
+            className="inline-block bg-brown-500 text-brown-50 px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-400 transition-colors"
           >
             Go to Sign In
           </Link>
@@ -139,7 +139,7 @@ export default function Signup() {
             <button
               type="submit"
               disabled={loading}
-              className="mt-2 bg-brown-500 text-white px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-400 transition-colors duration-300 disabled:opacity-50"
+              className="mt-2 bg-brown-500 text-brown-50 px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:bg-brown-400 transition-colors duration-300 disabled:opacity-50"
             >
               {loading ? 'Creating account...' : 'Sign Up'}
             </button>

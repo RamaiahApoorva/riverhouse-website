@@ -1,5 +1,3 @@
-import { BOOKING_URL } from './booking'
-
 // Events data — edit this file to add, remove, or change events. Nothing else needs to change.
 //
 // To add a new event, copy one of the objects below and fill in the fields.
@@ -29,9 +27,9 @@ export const events = [
     name: 'A Seat at the Table',
     date: '2026-10-14',
     dateDisplay: 'October 2026',
-    description: "Meeting off the mat. Think a boat to The O2, dinner under the stars, surrounded by people who care. A River House community social, the first to say thank you. Built on real conversation and good company — the kind of evening that stays with you.",
-    ctaLabel: 'Join Us For A Class',
-    ctaUrl: BOOKING_URL,
+    description: "Meeting off the mat. An opportunity for us to get together, dinner under the stars, surrounded by people who care. A River House community social, by the community for the community, the first to say - thank you. Built on real conversation and good company — the kind of evening that stays with you. For the River House Community.",
+    ctaLabel: 'Find Out More',
+    ctaUrl: 'mailto:hello.riverhousestudio@gmail.com?subject=A%20Seat%20at%20the%20Table&body=Hi%20Kimmy%2C%0D%0A%0D%0AI%20am%20intrigued%20to%20find%20out%20more%20about%20River%20House%20and%20A%20Seat%20at%20the%20Table.%0D%0A%0D%0AWould%20love%20to%20find%20out%20more.%0D%0A%0D%0ABest%2C',
   },
   {
     id: 'pilates-x-padel',

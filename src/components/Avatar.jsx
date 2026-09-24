@@ -13,7 +13,7 @@ export default function Avatar({ name, avatarUrl, size = 'sm' }) {
       <img
         src={avatarUrl}
         alt={name}
-        className={`${sizeClasses} rounded-full object-cover border border-stone-200`}
+        className={`${sizeClasses} rounded-full object-cover border border-brown-200`}
       />
     )
   }

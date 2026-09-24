@@ -17,10 +17,30 @@
 html {
   scroll-behavior: smooth;
   font-size: 115%;
+  color-scheme: dark;
+}
+
+/* Light mode: mirrors the brown color scale (50 with 900, 100 with 800, etc.)
+   so every bg-brown and text-brown class site-wide inverts automatically —
+   no per-page changes needed. Set by ThemeManager based on local time of day.
+   The hero video section deliberately does not use these tokens (it composites
+   text over real video footage, so it stays a fixed dark treatment always). */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-brown-50: #2e2015;
+  --color-brown-100: #3c281c;
+  --color-brown-200: #533829;
+  --color-brown-300: #6c4a38;
+  --color-brown-400: #8a5f48;
+  --color-brown-500: #a8785e;
+  --color-brown-600: #c49f86;
+  --color-brown-700: #ddc3b0;
+  --color-brown-800: #f0e6de;
+  --color-brown-900: #faf8f6;
 }
 
 body {
   font-family: var(--font-sans);
-  color: #f0e6de;
-  background: #2e2015;
+  color: var(--color-brown-50);
+  background: var(--color-brown-900);
 }

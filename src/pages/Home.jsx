@@ -5,7 +5,7 @@ import { supabase } from '../lib/supabase'
 import { BOOKING_URL, FIRST_CLASS_DEAL_URL } from '../lib/booking'
 
 const instructors = [
-  { name: 'Kimmy', role: 'Founder & Pilates Instructor', bio: 'Leads Pilates Root and Pilates Rise, building strength from the ground up.' },
+  { name: 'Kimmy', role: 'Pilates Instructor', bio: 'Leads Pilates Root and Pilates Rise, building strength from the ground up.' },
   { name: 'Shadeyah', role: 'Restorative Yoga Instructor', bio: 'Guides our Restorative Yoga sessions, creating space to slow down and reset.' },
   { name: 'Salima', role: 'Hatha Yoga Instructor', bio: 'Teaches Hatha Yoga, focused on steady, grounding practice.' },
 ]
@@ -185,11 +185,11 @@ export default function Home() {
       </section>
 
       {/* Classes */}
-      <section className="py-24 px-6 bg-[#F5F0E8]">
+      <section className="py-24 px-6 bg-brown-50">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
             <p className="text-brown-600 text-sm font-medium uppercase tracking-[0.2em] mb-3">Our Classes</p>
-            <h2 className="font-sans text-4xl md:text-5xl text-[#2A211B] font-semibold">Move With Intention</h2>
+            <h2 className="font-sans text-4xl md:text-5xl text-brown-900 font-semibold">Move With Intention</h2>
           </AnimatedSection>
 
           <motion.div
@@ -205,14 +205,14 @@ export default function Home() {
                 variants={fadeUp}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
+                className="group bg-brown-50 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <span className="text-xs font-medium uppercase tracking-wider text-brown-700 bg-brown-100 px-3 py-1 rounded-full">
                   {c.level}
                 </span>
-                <h3 className="font-sans text-2xl text-[#2A211B] mt-5 mb-2">{c.name}</h3>
-                <p className="text-[#2A211B]/80 text-sm leading-relaxed mb-4">{c.description}</p>
-                <p className="text-[#2A211B]/80 text-sm font-medium">{c.time}</p>
+                <h3 className="font-sans text-2xl text-brown-900 mt-5 mb-2">{c.name}</h3>
+                <p className="text-brown-900/80 text-sm leading-relaxed mb-4">{c.description}</p>
+                <p className="text-brown-900/80 text-sm font-medium">{c.time}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -220,11 +220,11 @@ export default function Home() {
       </section>
 
       {/* Instructors */}
-      <section className="py-24 px-6 bg-[#F5F0E8]">
+      <section className="py-24 px-6 bg-brown-50">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
             <p className="text-brown-600 text-sm font-medium uppercase tracking-[0.2em] mb-3">Meet The Team</p>
-            <h2 className="font-sans text-4xl md:text-5xl text-[#2A211B] font-semibold">Meet Your Instructors</h2>
+            <h2 className="font-sans text-4xl md:text-5xl text-brown-900 font-semibold">Meet Your Instructors</h2>
           </AnimatedSection>
 
           <motion.div
@@ -238,14 +238,14 @@ export default function Home() {
               <motion.div
                 key={inst.name}
                 variants={fadeUp}
-                className="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="bg-brown-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-brown-100 flex items-center justify-center">
                   <span className="text-brown-700 font-sans text-2xl font-semibold">{inst.name[0]}</span>
                 </div>
-                <h3 className="font-sans text-xl text-[#2A211B] mb-1">{inst.name}</h3>
+                <h3 className="font-sans text-xl text-brown-900 mb-1">{inst.name}</h3>
                 <p className="text-brown-600 text-sm font-medium mb-3">{inst.role}</p>
-                <p className="text-[#2A211B]/80 text-sm leading-relaxed">{inst.bio}</p>
+                <p className="text-brown-900/80 text-sm leading-relaxed">{inst.bio}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -253,11 +253,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-6 bg-[#F5F0E8]">
+      <section className="py-24 px-6 bg-brown-50">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
             <p className="text-[#AD8CC0] text-sm font-medium uppercase tracking-[0.2em] mb-3">Testimonials</p>
-            <h2 className="font-sans text-4xl md:text-5xl text-[#2A211B] font-semibold">Words From Our Community</h2>
+            <h2 className="font-sans text-4xl md:text-5xl text-brown-900 font-semibold">Words From Our Community</h2>
           </AnimatedSection>
 
           <motion.div
@@ -271,11 +271,11 @@ export default function Home() {
               <motion.div
                 key={t.name}
                 variants={fadeUp}
-                className="bg-white rounded-2xl p-8 shadow-sm"
+                className="bg-brown-50 rounded-2xl p-8 shadow-sm"
               >
-                <div className="text-[#2A211B]/15 text-5xl font-sans leading-none mb-4">&ldquo;</div>
-                <p className="text-[#2A211B]/80 leading-relaxed mb-6">{t.text}</p>
-                <p className="text-[#2A211B] font-medium text-sm">{t.name} <span className="text-[#2A211B]/50 font-normal">({t.pronouns})</span></p>
+                <div className="text-brown-900/15 text-5xl font-sans leading-none mb-4">&ldquo;</div>
+                <p className="text-brown-900/80 leading-relaxed mb-6">{t.text}</p>
+                <p className="text-brown-900 font-medium text-sm">{t.name} <span className="text-brown-900/50 font-normal">({t.pronouns})</span></p>
               </motion.div>
             ))}
           </motion.div>
@@ -283,18 +283,18 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-[#2A211B] text-center">
+      <section className="py-24 px-6 bg-brown-900 text-center">
         <AnimatedSection>
-          <p className="text-[#F5F0E8]/70 text-sm font-medium uppercase tracking-[0.2em] mb-3">Ready to Join</p>
-          <h2 className="font-sans text-4xl md:text-5xl text-[#F5F0E8] font-semibold mb-6">Begin Your Journey Today</h2>
-          <p className="text-[#F5F0E8]/80 max-w-lg mx-auto mb-10 leading-relaxed">
+          <p className="text-brown-50/70 text-sm font-medium uppercase tracking-[0.2em] mb-3">Ready to Join</p>
+          <h2 className="font-sans text-4xl md:text-5xl text-brown-50 font-semibold mb-6">Begin Your Journey Today</h2>
+          <p className="text-brown-50/80 max-w-lg mx-auto mb-10 leading-relaxed">
             Start with 2 classes for £33. Step into the studio and feel the difference.
           </p>
           <a
             href={FIRST_CLASS_DEAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#F5F0E8] text-[#2A211B] px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:opacity-90 transition-opacity duration-300"
+            className="inline-block bg-brown-50 text-brown-900 px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider hover:opacity-90 transition-opacity duration-300"
           >
             Book Your First Class With Us
           </a>
